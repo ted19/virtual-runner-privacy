@@ -4,212 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virtual Runner — 개인정보처리방침 / Privacy Policy</title>
+  <script>
+    // Redirect to the language-specific page based on the browser language.
+    (function () {
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      var dest = lang.indexOf('ko') === 0 ? 'ko/' : 'en/';
+      location.replace(dest);
+    })();
+  </script>
   <style>
-    :root {
-      --bg: #0b1020;
-      --card: #141b30;
-      --text: #e8ebf5;
-      --muted: #9aa3bd;
-      --accent: #f43f5e;
-      --accent2: #8b5cf6;
-      --border: rgba(255,255,255,0.08);
-    }
-    * { box-sizing: border-box; }
     body {
-      margin: 0;
+      margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: #0b1020; color: #e8ebf5;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo",
                    "Malgun Gothic", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
     }
-    .hero {
-      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-      padding: 48px 24px 40px;
-      text-align: center;
+    .box { text-align: center; padding: 24px; }
+    h1 { font-size: 1.4rem; margin: 0 0 16px; }
+    a {
+      display: inline-block; margin: 6px; padding: 10px 22px; border-radius: 999px;
+      color: #fff; text-decoration: none;
+      background: linear-gradient(135deg, #f43f5e 0%, #8b5cf6 100%);
     }
-    .hero h1 { margin: 0 0 6px; font-size: 1.9rem; letter-spacing: -0.5px; }
-    .hero p { margin: 0; opacity: 0.92; font-size: 0.95rem; }
-    .wrap { max-width: 760px; margin: -24px auto 0; padding: 0 18px 64px; }
-    .langbar { display: flex; gap: 8px; justify-content: center; margin: 28px 0 8px; }
-    .langbar a {
-      color: var(--muted); text-decoration: none; font-size: 0.85rem;
-      padding: 6px 14px; border: 1px solid var(--border); border-radius: 999px;
-    }
-    .langbar a:hover { color: var(--text); border-color: var(--accent2); }
-    .card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 28px 26px; margin-top: 18px;
-    }
-    h2 {
-      font-size: 1.25rem; margin: 0 0 4px; padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    h3 { font-size: 1.02rem; margin: 24px 0 6px; color: #fff; }
-    p, li { color: var(--text); font-size: 0.96rem; }
-    ul { padding-left: 20px; }
-    .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 18px; }
-    .pill {
-      display: inline-block; background: rgba(139,92,246,0.18); color: #c4b5fd;
-      border-radius: 999px; padding: 2px 10px; font-size: 0.78rem; margin-right: 6px;
-    }
-    a.link { color: #93c5fd; }
-    footer { text-align: center; color: var(--muted); font-size: 0.82rem; margin-top: 28px; }
-    .divider { height: 1px; background: var(--border); margin: 40px 0; }
   </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>Virtual Runner</h1>
-    <p>개인정보처리방침 · Privacy Policy</p>
-  </div>
-
-  <div class="wrap">
-    <div class="langbar">
-      <a href="#ko">한국어</a>
-      <a href="#en">English</a>
-    </div>
-
-    <!-- ============================ KOREAN ============================ -->
-    <section id="ko" class="card">
-      <h2>개인정보처리방침</h2>
-      <p class="meta">최종 업데이트: 2026년 6월 16일 · 앱: Virtual Runner (com.dalcomsoft.virtualrunner)</p>
-
-      <p>
-        Virtual Runner(이하 "본 앱")는 이용자의 개인정보를 중요하게 생각합니다.
-        본 앱은 <strong>오프라인 앱</strong>으로, 러닝 기록과 관련된 모든 데이터를
-        이용자의 기기에만 저장하며, 외부 서버로 전송하거나 제3자와 공유하지 않습니다.
-      </p>
-
-      <h3>1. 수집·이용하는 정보</h3>
-      <ul>
-        <li>
-          <span class="pill">위치정보</span>
-          러닝 중 경로·거리·페이스·속도를 측정하기 위해 기기의 GPS 위치정보(정밀/대략)를 사용합니다.
-          앱을 백그라운드로 전환하거나 화면이 꺼진 상태에서도 러닝 추적이 끊기지 않도록
-          <strong>백그라운드 위치정보</strong>를 사용합니다.
-        </li>
-        <li>
-          <span class="pill">운동 기록</span>
-          러닝 기록, 통계, 커리어/진행도, 설정값 등은 기기 내부 저장소(IndexedDB, 앱 환경설정)에
-          저장됩니다.
-        </li>
-      </ul>
-
-      <h3>2. 정보의 저장 위치 및 전송</h3>
-      <ul>
-        <li>수집된 모든 정보는 <strong>이용자의 기기에만 저장</strong>됩니다.</li>
-        <li>본 앱은 위치정보를 포함한 어떠한 개인정보도 외부 서버로 전송하지 않습니다.</li>
-        <li>별도의 회원가입·로그인·계정이 없습니다.</li>
-        <li>광고 식별자 수집, 행동 분석(애널리틱스), 제3자 데이터 공유를 하지 않습니다.</li>
-      </ul>
-
-      <h3>3. 기기 권한 안내</h3>
-      <ul>
-        <li><strong>위치 (정밀/대략/백그라운드)</strong>: 러닝 경로 및 거리 측정</li>
-        <li><strong>알림</strong>: 1km 단위, 결승선 임박, 완주 등 러닝 알림 표시 (기기 내 처리)</li>
-        <li><strong>포그라운드 서비스 / 절전 방지(WAKE_LOCK)</strong>: 러닝 중 지속적인 위치 추적 유지</li>
-        <li><strong>진동</strong>: 햅틱 피드백</li>
-        <li><strong>인터넷</strong>: 앱 동작에 필요한 기본 권한이며, 본 앱은 개인정보를 외부로 전송하지 않습니다.</li>
-      </ul>
-
-      <h3>4. 보유 기간 및 삭제</h3>
-      <p>
-        데이터는 이용자가 삭제하기 전까지 기기에 보관됩니다. 이용자는 앱의
-        <strong>설정 &gt; 데이터</strong> 메뉴에서 기록 또는 전체 데이터를 언제든지 삭제할 수 있으며,
-        앱을 삭제하면 기기에 저장된 모든 데이터가 함께 삭제됩니다.
-      </p>
-
-      <h3>5. 아동의 개인정보</h3>
-      <p>
-        본 앱은 특정 연령을 대상으로 별도의 개인정보를 수집하지 않으며, 모든 데이터는 기기에만 저장됩니다.
-      </p>
-
-      <h3>6. 개인정보처리방침의 변경</h3>
-      <p>
-        본 방침은 법령이나 앱 기능 변경에 따라 수정될 수 있으며, 변경 시 본 페이지를 통해 공지합니다.
-      </p>
-
-      <h3>7. 문의처</h3>
-      <p>
-        개인정보 관련 문의: <a class="link" href="mailto:techlab-platform@dalcomsoft.com">techlab-platform@dalcomsoft.com</a><br />
-        제공자: Dalcomsoft
-      </p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ============================ ENGLISH ============================ -->
-    <section id="en" class="card">
-      <h2>Privacy Policy</h2>
-      <p class="meta">Last updated: June 16, 2026 · App: Virtual Runner (com.dalcomsoft.virtualrunner)</p>
-
-      <p>
-        Virtual Runner ("the App") respects your privacy. The App is an
-        <strong>offline application</strong>: all data related to your runs is stored
-        <strong>only on your device</strong> and is never transmitted to any external server
-        or shared with third parties.
-      </p>
-
-      <h3>1. Information We Use</h3>
-      <ul>
-        <li>
-          <span class="pill">Location</span>
-          The App uses your device's GPS location (precise/approximate) to measure your route,
-          distance, pace, and speed during a run. <strong>Background location</strong> is used so
-          that tracking continues when the App is in the background or the screen is off.
-        </li>
-        <li>
-          <span class="pill">Activity Records</span>
-          Run records, statistics, career/progress, and settings are stored in your device's local
-          storage (IndexedDB and app preferences).
-        </li>
-      </ul>
-
-      <h3>2. Storage and Transmission</h3>
-      <ul>
-        <li>All information is stored <strong>only on your device</strong>.</li>
-        <li>The App does not transmit any personal data, including location, to any server.</li>
-        <li>There is no sign-up, login, or account.</li>
-        <li>We do not collect advertising identifiers, run analytics, or share data with third parties.</li>
-      </ul>
-
-      <h3>3. Device Permissions</h3>
-      <ul>
-        <li><strong>Location (fine/coarse/background)</strong>: measuring run route and distance</li>
-        <li><strong>Notifications</strong>: run alerts such as per-kilometer, finish-approaching, and finish (processed on device)</li>
-        <li><strong>Foreground service / Wake lock</strong>: keeping location tracking active during a run</li>
-        <li><strong>Vibration</strong>: haptic feedback</li>
-        <li><strong>Internet</strong>: a baseline permission required for the app to run; the App does not send personal data externally</li>
-      </ul>
-
-      <h3>4. Retention and Deletion</h3>
-      <p>
-        Data remains on your device until you delete it. You can delete your records or all data at
-        any time from <strong>Settings &gt; Data</strong> in the App. Uninstalling the App removes all
-        locally stored data.
-      </p>
-
-      <h3>5. Children's Privacy</h3>
-      <p>
-        The App does not collect personal information targeted at any specific age group; all data is
-        stored solely on the device.
-      </p>
-
-      <h3>6. Changes to This Policy</h3>
-      <p>
-        This policy may be updated to reflect legal or feature changes. Any changes will be posted on
-        this page.
-      </p>
-
-      <h3>7. Contact</h3>
-      <p>
-        Privacy inquiries: <a class="link" href="mailto:techlab-platform@dalcomsoft.com">techlab-platform@dalcomsoft.com</a><br />
-        Provider: Dalcomsoft
-      </p>
-    </section>
-
-    <footer>© 2026 Dalcomsoft · Virtual Runner</footer>
+  <div class="box">
+    <h1>Virtual Runner — 개인정보처리방침 / Privacy Policy</h1>
+    <p>언어를 선택하세요 / Choose a language</p>
+    <a href="ko/">한국어</a>
+    <a href="en/">English</a>
   </div>
 </body>
 </html>
